@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Você Cairia?</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo-area">
+            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo">
+            <span>Você Cairia?</span>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="hero">
+
+            <div class="hero-text">
+
+                <span class="tag">SIMULAÇÃO EDUCATIVA</span>
+
+                <h1>
+                    Você saberia identificar
+                    um link suspeito?
+                </h1>
+
+                <p>
+                    Faça um pequeno cadastro para participar
+                    desta experiência educativa sobre segurança
+                    digital.
+                </p>
+
+                <a href="{{ url_for('cadastro') }}" class="btn">
+                    Participar da simulação
+                </a>
+
+            </div>
+
+            <div class="hero-card">
+
+                <div class="shield">
+                    🛡️
+                </div>
+
+                <h2>
+                    Pense antes de clicar
+                </h2>
+
+                <p>
+                    Links e QR Codes podem esconder
+                    páginas maliciosas.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Projeto educativo sobre Segurança da Informação</p>
+    </footer>
+
+</body>
+
+</html>

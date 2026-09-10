@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Você Cairia?</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="logo-area">
+            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo">
+            <span>Você Cairia?</span>
+        </div>
+
+    </header>
+
+
+    <main class="result-container">
+
+        <section class="result-card">
+
+            <div class="warning-icon">
+                ⚠️
+            </div>
+
+            <span class="tag">
+                SIMULAÇÃO
+            </span>
+
+            <h1>
+                Você acabou de cair em uma simulação!
+            </h1>
+
+            {% if nome %}
+            <p class="welcome">
+                {{ nome }}, fique tranquilo. Esta página faz parte
+                de uma atividade educativa.
+            </p>
+            {% endif %}
+
+            <div class="alert-box">
+
+                <h2>
+                    O que acabou de acontecer?
+                </h2>
+
+                <p>
+                    Você forneceu informações em uma página que
+                    parecia ser um cadastro comum.
+                </p>
+
+                <p>
+                    Em uma situação real, uma página falsa poderia
+                    utilizar essas informações para aplicar golpes
+                    ou tentar obter dados pessoais.
+                </p>
+
+            </div>
+
+
+            <section class="explanation">
+
+                <h2>
+                    Por que não devemos entrar em qualquer link?
+                </h2>
+
+                <p>
+                    Links recebidos por mensagens, redes sociais,
+                    e-mails ou outros meios podem direcionar para
+                    páginas falsas criadas para enganar o usuário.
+                </p>
+
+                <p>
+                    Antes de clicar, é importante verificar quem
+                    enviou a mensagem, observar o endereço do site
+                    e desconfiar de mensagens que criam urgência
+                    ou prometem benefícios inesperados.
+                </p>
+
+            </section>
+
+
+            <section class="tips">
+
+                <h2>
+                    🔎 Fique atento aos sinais
+                </h2>
+
+                <div class="tips-grid">
+
+                    <div class="tip">
+                        <span>01</span>
+                        <h3>Verifique o endereço</h3>
+                        <p>
+                            Confira cuidadosamente o endereço
+                            do site antes de inserir informações.
+                        </p>
+                    </div>
+
+                    <div class="tip">
+                        <span>02</span>
+                        <h3>Desconfie da urgência</h3>
+                        <p>
+                            Mensagens que pressionam você a agir
+                            rapidamente podem ser suspeitas.
+                        </p>
+                    </div>
+
+                    <div class="tip">
+                        <span>03</span>
+                        <h3>Cuidado com QR Codes</h3>
+                        <p>
+                            Um QR Code também pode direcionar
+                            para uma página maliciosa.
+                        </p>
+                    </div>
+
+                    <div class="tip">
+                        <span>04</span>
+                        <h3>Confirme a origem</h3>
+                        <p>
+                            Se receber uma mensagem inesperada,
+                            procure o canal oficial da instituição.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ÁREA DO VÍDEO -->
+
+            <section class="video-section">
+
+                <h2>
+                    🎥 Assista ao vídeo
+                </h2>
+
+                <p>
+                    Agora que você descobriu a simulação,
+                    confira o vídeo para entender melhor como
+                    identificar possíveis golpes digitais.
+                </p>
+
+                <div class="video-container">
+
+                    <video controls>
+
+                        <source
+                            src="{{ url_for('static', filename='video/video.mp4') }}"
+                            type="video/mp4"
+                        >
+
+                        Seu navegador não suporta vídeos HTML5.
+
+                    </video>
+
+                </div>
+
+            </section>
+
+
+            <div class="final-message">
+
+                <h2>
+                    Pense antes de clicar.
+                </h2>
+
+                <p>
+                    Na dúvida, não clique. Verifique primeiro.
+                </p>
+
+            </div>
+
+
+            <a href="{{ url_for('index') }}" class="btn">
+                Voltar para o início
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>
+            Projeto educativo sobre Segurança da Informação
+        </p>
+    </footer>
+
+</body>
+
+</html>
