@@ -7,34 +7,45 @@
 
     <title>Cadastro - Você Cairia?</title>
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
 <body>
 
     <header class="header">
+
         <div class="logo-area">
-            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo">
+
+            <img src="{{ url_for('static', filename='img/logo.png') }}"
+                 alt="Logo IFRO">
+
             <span>Você Cairia?</span>
+
         </div>
+
     </header>
+
 
     <main class="form-container">
 
         <div class="form-card">
 
-            <span class="tag">PARTICIPE</span>
+            <span class="tag">
+                SIMULAÇÃO EDUCATIVA
+            </span>
 
             <h1>
                 Faça seu cadastro
             </h1>
 
             <p class="description">
-                Preencha os campos abaixo para continuar
-                com a experiência.
+                Preencha os dados abaixo para participar
+                da nossa experiência educativa.
             </p>
 
-            <form action="{{ url_for('resultado') }}" method="POST">
+
+            <form action="{{ url_for('informacoes') }}" method="POST">
 
                 <label for="nome">
                     Nome
@@ -48,6 +59,7 @@
                     required
                 >
 
+
                 <label for="email">
                     E-mail
                 </label>
@@ -59,6 +71,7 @@
                     placeholder="Digite seu e-mail"
                     required
                 >
+
 
                 <label for="senha">
                     Senha
@@ -73,32 +86,40 @@
                     required
                 >
 
+
                 <div class="password-rules">
 
                     <strong>A senha deve:</strong>
 
                     <ul>
                         <li>Ter pelo menos 8 caracteres</li>
-                        <li>Conter pelo menos uma letra</li>
-                        <li>Conter pelo menos um número</li>
+                        <li>Ter letras</li>
+                        <li>Ter pelo menos um número</li>
                     </ul>
 
                 </div>
 
+
                 <button type="submit" class="btn full">
-                    Continuar
+                    Cadastrar
                 </button>
 
             </form>
 
+
             <p class="privacy">
                 ⚠️ Esta é uma simulação educativa.
-                Nenhum dado será armazenado.
+                Os dados não serão armazenados.
             </p>
 
         </div>
 
     </main>
+
+
+    <footer>
+        Projeto educativo sobre Segurança da Informação
+    </footer>
 
 </body>
 

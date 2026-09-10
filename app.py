@@ -4,23 +4,16 @@ app = Flask(__name__)
 
 
 @app.route("/")
-def index():
-    return render_template("index.html")
-
-
-@app.route("/cadastro")
 def cadastro():
     return render_template("cadastro.html")
 
 
-@app.route("/resultado", methods=["POST"])
-def resultado():
-    # Os dados são recebidos apenas para a simulação.
-    # Não são armazenados em banco de dados.
+@app.route("/informacoes", methods=["POST"])
+def informacoes():
     nome = request.form.get("nome")
 
     return render_template(
-        "conscientizacao.html",
+        "informacoes.html",
         nome=nome
     )
 
