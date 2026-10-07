@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Cadastro</title>
+    <title>Você Cairia?</title>
 
     <link rel="stylesheet"
           href="{{ url_for('static', filename='css/style.css') }}">
@@ -17,107 +17,74 @@
 
         <div class="logo-area">
 
-            <img src="{{ url_for('static', filename='img/logo.png') }}"
-                 alt="Logo IFRO">
+            <img
+                src="{{ url_for('static', filename='img/logo.png') }}"
+                alt="Logo IFRO"
+            >
 
-            <span>IFRO - Campus Ariquemes</span>
+            <span>Você Cairia?</span>
 
         </div>
 
     </header>
 
 
-    <main class="form-container">
+    <main class="container">
 
-        <div class="form-card">
+        <section class="hero">
 
-            <span class="tag">
-                PARTICIPE E GANHE 
-            </span>
+            <div class="hero-text">
 
-            <h1>
-                Faça seu cadastro
-            </h1>
+                <span class="tag">
+                    PARTICIPE E GANHE
+                </span>
 
-            <p class="description">
-                Preencha os dados abaixo para participar.
-                
-            </p>
+                <h1>
+                    Exclusivo para alunos e servidores do IFRO - Campus Ariquemes
+                </h1>
 
+                <p>
+                    Faça um pequeno cadastro para participar.
+                </p>
 
-            <form action="{{ url_for('informacoes') }}" method="POST">
-
-                <label for="nome">
-                    Nome
-                </label>
-
-                <input
-                    type="text"
-                    id="nome"
-                    name="nome"
-                    placeholder="Digite seu nome"
-                    required
+                <a
+                    href="{{ url_for('cadastro') }}"
+                    class="btn"
                 >
+                    Participar
+                </a>
+
+            </div>
 
 
-                <label for="email">
-                    E-mail
-                </label>
+            <div class="hero-card">
 
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Digite seu e-mail"
-                    required
-                >
-
-
-                <label for="senha">
-                    Senha
-                </label>
-
-                <input
-                    type="password"
-                    id="senha"
-                    name="senha"
-                    placeholder="Crie uma senha"
-                    minlength="8"
-                    required
-                >
-
-
-                <div class="password-rules">
-
-                    <strong>A senha deve:</strong>
-
-                    <ul>
-                        <li>Ter pelo menos 8 caracteres</li>
-                        <li>Ter letras</li>
-                        <li>Ter pelo menos um número</li>
-                    </ul>
-
+                <div class="shield">
+                    🛡️
                 </div>
 
+                <h2>
+                    Pense antes de clicar
+                </h2>
 
-                <button type="submit" class="btn full">
-                    Cadastrar
-                </button>
+                <p>
+                    Recompensas inéditas para alunos e servidores
+                    do IFRO - Campus Ariquemes.
+                </p>
 
-            </form>
+            </div>
 
-
-            <p class="privacy">
-                ⚠️
-            </p>
-
-        </div>
+        </section>
 
     </main>
 
 
     <footer>
-        Projeto sobre Segurança da Informação
+
+        <p>
+            Projeto educativo Segurança da Informação
+        </p>
+
     </footer>
 
 </body>

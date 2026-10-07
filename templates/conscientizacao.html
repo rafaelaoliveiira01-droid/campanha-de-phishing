@@ -2,12 +2,21 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Você Cairia?</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Conscientização - Você Cairia?</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+
 </head>
 
 <body>
@@ -15,8 +24,14 @@
     <header class="header">
 
         <div class="logo-area">
-            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo">
+
+            <img
+                src="{{ url_for('static', filename='img/logo.png') }}"
+                alt="Logo IFRO"
+            >
+
             <span>Você Cairia?</span>
+
         </div>
 
     </header>
@@ -27,105 +42,143 @@
         <section class="result-card">
 
             <div class="warning-icon">
-                ⚠️
+                🛡️
             </div>
 
+
             <span class="tag">
-                SIMULAÇÃO
+                CONSCIENTIZAÇÃO
             </span>
 
+
             <h1>
-                Você acabou de cair em uma simulação!
+                Como se proteger de golpes digitais?
             </h1>
 
-            {% if nome %}
+
             <p class="welcome">
-                {{ nome }}, fique tranquilo. Esta página faz parte
-                de uma atividade educativa, criada por alunas do 3-A de informática
-                Rafaela Ramos 
-                Mariana Vieira
-                Maria Eduarda Coelho
+                A internet faz parte do nosso dia a dia,
+                mas é importante ter cuidado com links,
+                mensagens e páginas desconhecidas.
             </p>
-            {% endif %}
+
 
             <div class="alert-box">
 
                 <h2>
-                    O que acabou de acontecer?
+                    ⚠️ Fique atento!
                 </h2>
 
                 <p>
-                    Você forneceu informações em uma página que
-                    parecia ser um cadastro comum.
-                </p>
-
-                <p>
-                    Em uma situação real, uma página falsa poderia
-                    utilizar essas informações para aplicar golpes
-                    ou tentar obter dados pessoais.
+                    Golpes digitais podem utilizar páginas
+                    falsas, mensagens, QR Codes e promoções
+                    para tentar convencer as pessoas a
+                    fornecer informações pessoais.
                 </p>
 
             </div>
-
-
-            <section class="explanation">
-
-                <h2>
-                    Por que não devemos entrar em qualquer link?
-                </h2>
-
-                <p>
-                    Links recebidos por mensagens, redes sociais,
-                    e-mails ou outros meios podem direcionar para
-                    páginas falsas criadas para enganar o usuário.
-                </p>
-
-                <p>
-                    Antes de clicar, é importante verificar quem
-                    enviou a mensagem, observar o endereço do site
-                    e desconfiar de mensagens que criam urgência
-                    ou prometem benefícios inesperados.
-                </p>
-
-            </section>
 
 
             <section class="tips">
 
                 <h2>
-                     Fique atento aos sinais
+                    🔎 Principais cuidados
                 </h2>
+
 
                 <div class="tips-grid">
 
-                    <div class="tip">
-                        <span>01</span>
-                        <h3>Verifique o endereço</h3>
-                        <p>
-                            Confira cuidadosamente o endereço
-                            do site antes de inserir informações.
-                            Se receber uma mensagem inesperada,
-                            procure o canal oficial da instituição.
-                        </p>
-                    </div>
 
                     <div class="tip">
-                        <span>02</span>
-                        <h3>Desconfie da urgência</h3>
+
+                        <span>01</span>
+
+                        <h3>
+                            Verifique os links
+                        </h3>
+
                         <p>
-                            Essa simulação ensina que não devemos colocar nossos dados
-                            em qualquer lugar, pois, hackers podem roubar seus dados 
-                            facilmente com essas informações, recomendaos você trocar 
-                            sua senha para uma mais forte, se for a mesma que colocou na simulação.
+                            Antes de clicar, confira o endereço
+                            do site e procure sinais de que ele
+                            pode ser falso.
                         </p>
+
                     </div>
+
+
+                    <div class="tip">
+
+                        <span>02</span>
+
+                        <h3>
+                            Não compartilhe senhas
+                        </h3>
+
+                        <p>
+                            Nunca informe suas senhas em páginas
+                            ou mensagens cuja origem você não conhece.
+                        </p>
+
+                    </div>
+
+
+                    <div class="tip">
+
+                        <span>03</span>
+
+                        <h3>
+                            Cuidado com QR Codes
+                        </h3>
+
+                        <p>
+                            Antes de acessar um QR Code,
+                            verifique para onde ele está direcionando.
+                        </p>
+
+                    </div>
+
+
+                    <div class="tip">
+
+                        <span>04</span>
+
+                        <h3>
+                            Desconfie de ofertas
+                        </h3>
+
+                        <p>
+                            Promoções muito boas, prêmios inesperados
+                            e mensagens urgentes podem ser sinais de golpe.
+                        </p>
+
+                    </div>
+
 
                 </div>
 
             </section>
 
 
-            <!-- ÁREA DO VÍDEO -->
+            <section class="explanation">
+
+                <h2>
+                    🧠 Pense antes de clicar
+                </h2>
+
+                <p>
+                    Quando receber uma mensagem inesperada,
+                    não tenha pressa para clicar. Verifique
+                    quem enviou, confira o endereço do site
+                    e procure informações nos canais oficiais.
+                </p>
+
+                <p>
+                    Pequenos cuidados podem ajudar a proteger
+                    suas informações e evitar golpes digitais.
+                </p>
+
+            </section>
+
 
             <section class="video-section">
 
@@ -134,16 +187,20 @@
                 </h2>
 
                 <p>
-                    Agora que você descobriu a simulação,
-                    confira o vídeo para entender melhor como
-                    identificar possíveis golpes digitais.
+                    Confira o vídeo para aprender mais sobre
+                    segurança e como identificar possíveis
+                    golpes digitais.
                 </p>
+
 
                 <div class="video-container">
 
                     <video controls>
 
-                        <source src="{{ url_for('static', filename='video/video.mp4') }}" type="video/mp4">
+                        <source
+                            src="{{ url_for('static', filename='video/video.mp4') }}"
+                            type="video/mp4"
+                        >
 
                         Seu navegador não suporta vídeos HTML5.
 
@@ -167,7 +224,10 @@
             </div>
 
 
-            <a href="{{ url_for('index') }}" class="btn">
+            <a
+                href="{{ url_for('index') }}"
+                class="btn"
+            >
                 Voltar para o início
             </a>
 
@@ -177,9 +237,11 @@
 
 
     <footer>
+
         <p>
             Projeto educativo sobre Segurança da Informação
         </p>
+
     </footer>
 
 </body>
